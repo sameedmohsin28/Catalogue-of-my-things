@@ -1,8 +1,10 @@
+require 'time'
+
 class Item
   attr_reader :id, :archived
   attr_accessor :publish_date, :genre, :author_name, :label
-  
-  def initialize (publish_date, archived)
+
+  def initialize(publish_date, archived)
     @id = Random.rand(1..1000)
     @publish_date = publish_date
     @archived = archived
@@ -21,5 +23,14 @@ class Item
 
   def add_label(label)
     @label << label
+  end
+
+  def can_be_archived?
+    calculated_years = ((Time.new - Time.parse(@publish_date)) / 31_615_673).floor
+    calculated_years > 10
+  end
+
+  def move_to_archive
+    @archived = true if can_be_archived?
   end
 end
