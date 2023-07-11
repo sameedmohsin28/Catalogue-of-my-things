@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'time'
-
 # Represents an item in the catalog.
 class Item
   attr_reader :id, :archived
