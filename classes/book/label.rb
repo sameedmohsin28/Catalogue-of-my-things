@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Label has 1 to many association with Book/Item
 class Label
   attr_reader :items
