@@ -1,5 +1,5 @@
 require_relative '../classes/book/label'
-require_relative './mocks/book_mock_for_label'
+require_relative 'mocks/book_mock_for_label'
 
 describe Label do
   before :all do
