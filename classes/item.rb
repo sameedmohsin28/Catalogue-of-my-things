@@ -1,15 +1,16 @@
 require 'time'
+
 # Represents an item in the catalog.
 class Item
   attr_reader :id, :archived
-  attr_accessor :publish_date, :genre, :author_name, :label
+  attr_accessor :publish_date, :genre, :author, :label
 
   def initialize(publish_date, archived)
     @id = Random.rand(1..1000)
     @publish_date = publish_date
     @archived = archived
     @genre = []
-    @author_name = []
+    @author = []
     @label = []
   end
 
@@ -17,8 +18,8 @@ class Item
     @genre << genre
   end
 
-  def add_author(author_name)
-    @author_name << author_name
+  def add_author(author)
+    @author << author
   end
 
   def add_label(label)
