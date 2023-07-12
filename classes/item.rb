@@ -11,7 +11,7 @@ class Item
     @archived = archived
     @genre = []
     @author = []
-    @label = []
+    @label = 'none'
   end
 
   def add_genre(genre)
@@ -23,7 +23,8 @@ class Item
   end
 
   def add_label(label)
-    @label << label
+    @label = label
+    label.items << self unless label.items.include?(self)
   end
 
   def can_be_archived?
