@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require 'time'
+
 # Represents an item in the catalog.
 class Item
   attr_reader :id, :archived
@@ -10,7 +13,7 @@ class Item
     @archived = archived
     @genre = []
     @author_name = []
-    @label = []
+    @label = 'none'
   end
 
   def add_genre(genre)
@@ -22,7 +25,8 @@ class Item
   end
 
   def add_label(label)
-    @label << label
+    @label = label
+    label.items << self unless label.items.include?(self)
   end
 
   def can_be_archived?
