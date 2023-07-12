@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require './classes/item'
 require 'time'
 
+# A Game class the inherits from Item class
 class Game < Item
   def initialize(publish_date, archived, last_played_at, multiplayer)
     super(publish_date, archived)
