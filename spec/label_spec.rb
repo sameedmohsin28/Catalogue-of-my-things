@@ -4,7 +4,7 @@ require_relative 'mocks/book_mock_for_label'
 describe Label do
   before :all do
     @label = Label.new('World Order', 'Pink')
-    @book_mock = BookMock.new('09-09-2014', false, 'Penguin Publishers', 'good')
+    @book_mock = BookMock.new('09-09-2014', 'Penguin Publishers', 'good')
     @label.add_item(@book_mock)
   end
 

@@ -2,7 +2,7 @@ require_relative '../classes/book/book'
 
 describe Book do
   before :all do
-    @book = Book.new('05-09-2011', false, 'Crown Business', 'good')
+    @book = Book.new('05-09-2011', 'Crown Business', 'good')
   end
 
   it 'takes four parameters and returns a Book object' do

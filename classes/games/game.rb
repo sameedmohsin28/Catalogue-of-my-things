@@ -4,8 +4,8 @@ require 'time'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(publish_date, archived, last_played_at, multiplayer)
-    super(publish_date, archived)
+  def initialize(publish_date, last_played_at, multiplayer)
+    super(publish_date)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
