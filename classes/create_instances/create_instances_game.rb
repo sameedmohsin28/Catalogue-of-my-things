@@ -3,6 +3,7 @@ require_relative '../games/game'
 
 class GameMethods
   attr_accessor :games, :authors
+
   def initialize
     @games = []
     @authors = []

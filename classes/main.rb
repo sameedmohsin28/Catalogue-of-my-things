@@ -27,7 +27,7 @@ class Startup
       '3' => :list_of_games,
       '6' => :list_of_authors,
       '9' => :create_a_game,
-      '10' => :exit,
+      '10' => :exit
     }
 
     method = options[selector]
