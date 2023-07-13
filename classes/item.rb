@@ -13,7 +13,8 @@ class Item
   end
 
   def add_genre(genre)
-    @genre << genre
+    @genre = genre
+    genre.items << self unless genre.items.include?(self)
   end
 
   def author=(author)
