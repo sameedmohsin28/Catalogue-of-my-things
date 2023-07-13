@@ -1,9 +1,9 @@
 require_relative '../classes/games/game'
 
 RSpec.describe Game do
-  let(:publish_date) { "2000/08/09" }
+  let(:publish_date) { '2000/08/09' }
   let(:archived) { true }
-  let(:last_played_at) { "2021/01/01" }
+  let(:last_played_at) { '2021/01/01' }
   let(:multiplayer) { true }
   let(:game) { Game.new(publish_date, archived, last_played_at, multiplayer) }
 

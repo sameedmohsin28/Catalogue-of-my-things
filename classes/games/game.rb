@@ -4,6 +4,7 @@ require 'time'
 # A Game class the inherits from Item class
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
+
   def initialize(publish_date, archived, last_played_at, multiplayer)
     super(publish_date, archived)
     @multiplayer = multiplayer
