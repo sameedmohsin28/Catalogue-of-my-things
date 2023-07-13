@@ -1,3 +1,4 @@
+
 -- Schema for Item
 CREATE TABLE item (
   id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -48,5 +49,3 @@ CREATE TABLE item_genre (
 );
 
 -- Schema for games
-
-
