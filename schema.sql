@@ -31,8 +31,15 @@ CREATE TABLE item_label (
 
 
 -- Schema for songs
+CREATE TABLE genre (
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name TEXT
+)
 
-
+CREATE TABLE music_album (
+  id INT PRIMARY KEY REFERENCES item(id),
+  on_spotify BOOLEAN
+)
 
 -- Schema for games
 
