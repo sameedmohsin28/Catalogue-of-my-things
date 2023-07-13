@@ -6,9 +6,7 @@ class App
     @main = main
     # code  for book
 
-
     # code for music
-
 
     # code for game
     @game_methods = GameMethods.new
@@ -20,13 +18,7 @@ class App
 
   # code for book
 
-
-
-
   # code for music
-
-
-
 
   # code for game
   def create_a_game
