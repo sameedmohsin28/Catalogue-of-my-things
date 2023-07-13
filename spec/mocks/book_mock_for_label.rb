@@ -1,24 +1,13 @@
-require 'time'
+class BookMock
+  attr_reader :id, :archived
+  attr_accessor :publisher, :cover_state, :publish_date, :label
 
-class Item
-  attr_reader :id, :archived, :author
-  attr_accessor :publish_date, :genre, :label
-
-  def initialize(publish_date, archived)
+  def initialize(publish_date, archived, publisher, cover_state)
     @id = Random.rand(1..1000)
     @publish_date = publish_date
     @archived = archived
-    @genre = []
-    @label = []
-  end
-
-  def add_genre(genre)
-    @genre << genre
-  end
-
-  def author=(author)
-    @author = author
-    author.items.push(self) unless author.items.include?(self)
+    @publisher = publisher
+    @cover_state = cover_state
   end
 
   def add_label(label)
@@ -28,7 +17,7 @@ class Item
 
   def can_be_archived?
     calculated_years = ((Time.new - Time.parse(@publish_date)) / 31_615_673).floor
-    calculated_years > 10
+    @cover_state == 'bad' || calculated_years > 10
   end
 
   def move_to_archive
