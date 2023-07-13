@@ -4,7 +4,7 @@ RSpec.describe Genre do
   describe '#add_item' do
     it 'associates the genre with the item' do
       genre = Genre.new('Rock')
-      item = Item.new('2023-01-01', false)
+      item = Item.new('2023-01-01')
 
       genre.add_item(item)
 
@@ -13,7 +13,7 @@ RSpec.describe Genre do
 
     it 'adds the item to the genre' do
       genre = Genre.new('Rock')
-      item = Item.new('2023-01-01', false)
+      item = Item.new('2023-01-01')
 
       genre.add_item(item)
 
