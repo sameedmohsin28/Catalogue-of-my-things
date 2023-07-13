@@ -1,13 +1,13 @@
 class Genre
-  attr_accessor :name, :description, :items
+  attr_accessor :name, :items
 
-  def initialize(name, description)
+  def initialize(name)
     @name = name
-    @description = description
     @items = []
   end
 
   def add_item(item)
     @items << item
+    item.genre = self
   end
 end

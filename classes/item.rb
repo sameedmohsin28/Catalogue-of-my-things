@@ -1,5 +1,4 @@
 require 'time'
-# Represents an item in the catalog.
 class Item
   attr_reader :id, :archived
   attr_accessor :publish_date, :genre, :author_name, :label
