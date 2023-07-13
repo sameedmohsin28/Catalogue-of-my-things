@@ -20,7 +20,7 @@ CREATE TABLE books (
 CREATE TABLE label(
   id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   title TEXT,
-  color TEXT,
+  color TEXT
 );
 
 CREATE TABLE item_label (
