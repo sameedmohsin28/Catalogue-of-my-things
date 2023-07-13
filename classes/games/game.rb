@@ -1,7 +1,6 @@
 require_relative '../item'
 require 'time'
 
-# A Game class the inherits from Item class
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 

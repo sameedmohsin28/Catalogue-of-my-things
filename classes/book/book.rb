@@ -1,6 +1,5 @@
 require_relative '../item'
 
-# Book is a sub-class of item
 class Book < Item
   attr_accessor :publisher, :cover_state
 
