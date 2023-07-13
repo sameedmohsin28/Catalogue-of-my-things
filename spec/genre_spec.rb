@@ -1,4 +1,4 @@
-require_relative '../classes/genre'
+require_relative '../classes/musicAlbum/genre'
 
 RSpec.describe Genre do
   describe '#add_item' do

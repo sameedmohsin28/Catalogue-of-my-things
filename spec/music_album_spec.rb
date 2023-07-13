@@ -1,4 +1,4 @@
-require_relative '../classes/music_album'
+require_relative '../classes/musicAlbum/music_album'
 
 RSpec.describe MusicAlbum do
   describe '#can_be_archived?' do
