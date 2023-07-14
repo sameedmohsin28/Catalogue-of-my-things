@@ -14,4 +14,15 @@ class Book < Item
 
     false
   end
+
+  def to_json(*args)
+    {
+      class_name: self.class.name,
+      publish_date: @publish_date,
+      publisher: @publisher,
+      cover_state: @cover_state,
+      archived: @archived,
+      id: @id
+    }.to_json(*args)
+  end
 end
