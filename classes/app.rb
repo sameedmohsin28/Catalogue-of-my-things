@@ -1,4 +1,4 @@
-require_relative 'Methods/game_methods'
+require_relative 'create_instances/create_instances_game'
 require_relative 'storage'
 
 class App
@@ -10,10 +10,13 @@ class App
 
     # code for game
     @game_methods = GameMethods.new
-    return unless File.empty?('./JSON/games.json') == false && File.empty?('./JSON/authors.json') == false
+    unless File.empty?('./json_database/games.json') == false && File.empty?('./json_database/authors.json') == false
+      return
+    end
 
     @game_methods.games = Storage.load_data('games')
     @game_methods.authors = Storage.load_data('authors')
+    puts @game_methods.authors
   end
 
   # code for book
