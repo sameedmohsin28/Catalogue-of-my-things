@@ -16,9 +16,15 @@ class Label
 
   def to_json(*args)
     {
-      id: @id,
-      title: @title,
-      color: @color,
-      items: @item
+      JSON.create_id => self.class.name,
+      'id' => @id,
+      'title' => @title,
+      'color' => @color,
+      'items' => @item
     }.to_json(*args)
+  end
+
+  def self.json_create(object)
+    new(object['title'], object['color'])
+  end
 end

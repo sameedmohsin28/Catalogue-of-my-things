@@ -8,9 +8,9 @@ class App
 
     # code  for book
     @ui_task_book_instance = UITaskBook.new
-    # return unless File.empty?('./JSON/books.json') == false && File.empty?('./JSON/labels.json') == false
-    # @ui_task_book_instance.books =  Storage.load_data('books')
-    # @ui_task_book_instance.labels =  Storage.load_data('labels')
+    return unless File.empty?('./json_database/books.json') == false && File.empty?('./json_database/labels.json') == false
+    @ui_task_book_instance.books = Storage.load_data('books')
+    @ui_task_book_instance.labels = Storage.load_data('labels')
 
     # code for music
 
@@ -36,6 +36,7 @@ class App
       cover_state = gets.chomp
     end
     @ui_task_book_instance.add_a_book(publish_date, publisher, cover_state)
+    Storage.save_data('books', @ui_task_book_instance.books)
     puts 'The book has been added.'
     puts ''
     @main.show_options

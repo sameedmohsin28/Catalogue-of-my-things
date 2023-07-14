@@ -2,7 +2,7 @@ require_relative '../book/book'
 require_relative '../book/label'
 
 class UITaskBook
-  attr_reader :books, :labels
+  attr_accessor :books, :labels
 
   def initialize
     @books = []
