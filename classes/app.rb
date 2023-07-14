@@ -1,9 +1,9 @@
 require_relative 'create_instances/create_instances_game'
 require_relative 'create_instances/ui_tasks_book'
-require_relative 'storage'
 require_relative 'create_instances/create_instance_music'
 require_relative 'musicAlbum/music_album'
 require_relative 'musicAlbum/genre'
+require_relative 'storage'
 
 class App
   def initialize(main)

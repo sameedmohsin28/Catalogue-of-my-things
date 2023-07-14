@@ -11,8 +11,8 @@ class Startup
     puts '1 - List all books'
     puts '2 - List all music albums'
     puts '3 - List all games'
-    puts '4 - List all genres'
-    puts '5 - List all labels'
+    puts '4 - List all labels'
+    puts '5 - List all genres'
     puts '6 - List all authors'
     puts '7 - Add a book'
     puts '8 - Add a music album'
@@ -26,13 +26,14 @@ class Startup
 
   def choice(selector)
     options = {
-      '2' => :list_all_music_albums,
-      '4' => :list_all_genres,
-      '8' => :create_a_music_album,
       '1' => :directing_to_list_all_books,
+      '2' => :list_all_music_albums,
       '3' => :list_of_games,
-      '5' => :directing_to_list_all_labels,
+      '4' => :directing_to_list_all_labels,
+      '5' => :list_all_genres,
       '6' => :list_of_authors,
+      '7' => :input_for_add_a_book,
+      '8' => :create_a_music_album,
       '9' => :create_a_game,
       '10' => :exit
     }
