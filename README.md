@@ -41,7 +41,7 @@
 
 ## 🎥 Video Presentation <a name="video-presentation"></a>
 
-[Click here]() to watch a short video presentation about the project.
+[Click here](https://drive.google.com/file/d/1VzeVJlE2PNI4hRqrWzt7odShv-OAuDWi/view?usp=sharing) to watch a short video presentation about the project.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
