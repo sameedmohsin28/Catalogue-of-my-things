@@ -1,5 +1,3 @@
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -9,7 +7,7 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
+  - [Run](#run)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -18,30 +16,27 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 Catalogue of my things <a name="about-project"></a>
 
-# 📖 [Catalogue of my Things] <a name="about-project"></a>
-
-**[Catalogue of my Things]** is a ruby object-oriented programming console app that will help you record different types of things you own: books, music albums, movies, and games.
+**Catalogue of my Things** is a ruby object-oriented programming console app that will help you record different types of things you own: books, music albums, movies, and games.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
+<details>
 <summary>Backend</summary>
   <ul>
-    <li><a href="https://www.ruby.com/">Ruby</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-- **[Implement classes and objects in Ruby]**
-- **[Implement inheritance, abstraction, encapsulation and polymorphism]**
-- **[Implement database using postgresql]**
+- **Implemented classes and objects in Ruby**
+- **Implemented inheritance, abstraction, encapsulation and polymorphism**
+- **Implemented database using postgresql**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -49,7 +44,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need to
 <a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>
 
 ### Setup
@@ -57,46 +52,59 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
-  git clone git@github.com:Mylo16/00p.git
+  cd <my-folder>
+  git clone git@github.com:sameedmohsin28/Catalogue-of-my-things.git
 ```
 
-### Install
+### Run
 
-Install this project with:
+Run this project with:
+
+```sh
+  ruby classes/main.rb
+```
+
+### Run tests
+
+Run bundle install in cmd
 
 ```sh
   bundle install
 ```
-
-### Run tests
+Run rspec in cmd
 
 ```sh
   rspec
 ```
 
-<!-- AUTHORS -->
+## 👥 Authors <a name="authors"></a>
 
-## 👥 Authors
+👤 **Sameed Mohsin**
 
-### 👥 Author <a name="authors"></a>
+- GitHub: [@sameedmohsin28](https://github.com/sameedmohsin28/)
+- Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
+- LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
-- GitHub: [@githubhandle](https://github.com/Mylo16)
-- Twitter: [@twitterhandle](https://twitter.com/EricAntwi384)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/ericopokuantwi)
+👤 **Eric Antwi**
+
+- GitHub: [Eric Antwi](https://github.com/Mylo16)
+- Twitter: [Eric Antwi](https://twitter.com/EricAntwi384)
+- LinkedIn: [Eric Antwi](https://linkedin.com/in/ericopokuantwi)
+
+👤 **Federica Ulzurrun**
+
+- GitHub: [@federicaulzurrun](https://github.com/federicaulzurrun)
+- Twitter: [@ulzurrunfede](https://mobile.twitter.com/ulzurrunfede)
+- LinkedIn: [Federica Ulzurrun](https://www.linkedin.com/in/federicaulzurrun/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[We willl build the frontend version of this app]**
-- [ ] **[We willl build the mobile version of this app]**
+- **The frontend will be developed later**
+- **A mobile version for this project will be created**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -106,15 +114,11 @@ Feel free to check the [issues page](https://github.com/sameedmohsin28/Catalogue
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project kindly give us a star or a thumbs up.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
