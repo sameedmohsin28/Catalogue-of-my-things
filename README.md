@@ -4,6 +4,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🎥 Video Presentation](#video-presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -37,6 +38,10 @@
 - **Implemented database using postgresql**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Video Presentation <a name="video-presentation"></a>
+
+[Click here]() to watch a short video presentation about the project.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
