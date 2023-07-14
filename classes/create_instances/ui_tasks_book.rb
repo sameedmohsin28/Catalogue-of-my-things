@@ -6,12 +6,19 @@ class UITaskBook
 
   def initialize
     @books = []
-    @labels = [Label.new('TLS', 'ER'), Label.new('WO', 'HK')]
+    @labels = []
   end
 
-  def add_a_book(publish_date, publisher, cover_state)
+  def add_a_book(publish_date, publisher, cover_state, label, color)
     book_instance = Book.new(publish_date, publisher, cover_state)
+    create_label(label, color, book_instance)
     @books.push(book_instance)
+  end
+
+  def create_label(label, color, book_instance)
+    label_instance = Label.new(label, color)
+    label_instance.add_item(book_instance)
+    @labels.push(label_instance) 
   end
 
   def list_all_books

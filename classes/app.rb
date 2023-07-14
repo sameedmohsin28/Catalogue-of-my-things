@@ -16,7 +16,7 @@ class App
 
     # code for game
     @game_methods = GameMethods.new
-    return unless File.empty?('./JSON/games.json') == false && File.empty?('./JSON/authors.json') == false
+    return unless File.empty?('./json_database/games.json') == false && File.empty?('./json_database/authors.json') == false
 
     @game_methods.games = Storage.load_data('games')
     @game_methods.authors = Storage.load_data('authors')
@@ -35,8 +35,13 @@ class App
       print 'What is the state of the book cover? [good/bad]: '
       cover_state = gets.chomp
     end
-    @ui_task_book_instance.add_a_book(publish_date, publisher, cover_state)
+    print 'Title of the book: '
+    label = gets.chomp
+    print 'color of the book cover: '
+    color = gets.chomp
+    @ui_task_book_instance.add_a_book(publish_date, publisher, cover_state, label, color)
     Storage.save_data('books', @ui_task_book_instance.books)
+    Storage.save_data('labels', @ui_task_book_instance.labels)
     puts 'The book has been added.'
     puts ''
     @main.show_options
