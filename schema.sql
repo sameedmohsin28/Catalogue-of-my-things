@@ -49,3 +49,21 @@ CREATE TABLE item_genre (
 );
 
 -- Schema for games
+CREATE TABLE games (
+  id INT NOT NULL PRIMARY KEY REFERENCES item(id)
+  publish_date DATE,
+  last_played_at DATE,
+  multiplayer BOOLEAN
+);
+
+CREATE TABLE author (
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  first_name CHAR(255),
+  last_name CHAR(255)
+);
+
+CREATE TABLE item_author (
+  author INT REFERENCES games(id),
+  item INT REFERENCES item(id),
+  PRIMARY KEY (author, item)
+);
