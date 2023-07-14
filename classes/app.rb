@@ -1,4 +1,5 @@
 require_relative 'create_instances/create_instances_game'
+require_relative 'create_instances/ui_tasks_book'
 require_relative 'storage'
 require_relative 'create_instances/create_instance_music'
 require_relative 'musicAlbum/music_album'
@@ -7,7 +8,15 @@ require_relative 'musicAlbum/genre'
 class App
   def initialize(main)
     @main = main
+
     # code  for book
+    @ui_task_book_instance = UITaskBook.new
+    unless File.empty?('./json_database/books.json') == false && File.empty?('./json_database/labels.json') == false
+      return
+    end
+
+    @ui_task_book_instance.books = Storage.load_data('books')
+    @ui_task_book_instance.labels = Storage.load_data('labels')
 
     # code for music
     @music_catalog = MusicCatalog.new
@@ -25,9 +34,42 @@ class App
 
     @game_methods.games = Storage.load_data('games')
     @game_methods.authors = Storage.load_data('authors')
+    puts @game_methods.authors
   end
 
   # code for book
+  def input_for_add_a_book
+    print 'Enter publish date [DD/MM/YYYY]: '
+    publish_date = gets.chomp
+    print 'Enter publisher name: '
+    publisher = gets.chomp
+    print 'What is the state of the book cover? [good/bad]: '
+    cover_state = gets.chomp
+    if cover_state != 'good' && cover_state != 'bad'
+      puts 'Please enter a valid input.'
+      print 'What is the state of the book cover? [good/bad]: '
+      cover_state = gets.chomp
+    end
+    print 'Title of the book: '
+    label = gets.chomp
+    print 'color of the book cover: '
+    color = gets.chomp
+    @ui_task_book_instance.add_a_book(publish_date, publisher, cover_state, label, color)
+    Storage.save_data('books', @ui_task_book_instance.books)
+    Storage.save_data('labels', @ui_task_book_instance.labels)
+    puts "The book has been added. \n"
+    @main.show_options
+  end
+
+  def directing_to_list_all_books
+    @ui_task_book_instance.list_all_books
+    @main.show_options
+  end
+
+  def directing_to_list_all_labels
+    @ui_task_book_instance.list_all_labels
+    @main.show_options
+  end
 
   # code for music
   def create_a_music_album
@@ -94,6 +136,7 @@ class App
   end
 
   def exit
-    puts 'Exited'
+    puts 'Thank you for using this app!'
+    puts ''
   end
 end
