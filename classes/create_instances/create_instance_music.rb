@@ -20,7 +20,7 @@ class MusicCatalog
   def create_genre (name, music_album)
     genre = Genre.new(name)
     author.add_item(music_album)
-    genres.push(genre)
+    @genres.push(genre)
   end
 
   def list_all_music_albums
@@ -31,7 +31,7 @@ class MusicCatalog
 
   def list_all_genres
     @genres.each do |genre|
-      puts "#{@genres.find_index(genre)} ID: #{genre.id}, Name: #{genre.title}"
+      puts "#{@genres.find_index(genre)} ID: #{genre.id}, Name: #{genre.name}"
     end
   end
 
@@ -41,11 +41,11 @@ class MusicCatalog
     save_data('music_albums.json', @music_albums)
   end
   
-  def create_genre(name)
-    genre = Genre.new(name)
-    @genres.push(genre)
-    save_data('genres.json', @genres)
-  end
+  # def create_genre(name)
+  #   genre = Genre.new(name)
+  #   @genres.push(genre)
+  #   save_data('genres.json', @genres)
+  # end
   
   private
   
