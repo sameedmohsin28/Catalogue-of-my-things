@@ -2,7 +2,7 @@ require 'json'
 
 class Storage
   @file_extention = 'json'
-  @base_url = './JSON/'
+  @base_url = './json_database/'
 
   def self.save_data(class_name, object)
     file_path = File.expand_path("#{@base_url}#{class_name}.#{@file_extention}")

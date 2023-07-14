@@ -40,17 +40,4 @@ class MusicCatalog
     @music_albums.push(music_album)
     save_data('music_albums.json', @music_albums)
   end
-  
-  # def create_genre(name)
-  #   genre = Genre.new(name)
-  #   @genres.push(genre)
-  #   save_data('genres.json', @genres)
-  # end
-  
-  private
-  
-  def save_data(filename, data)
-    File.open(filename, 'w') { |file| file.write(JSON.dump(data)) }
-    puts "Data saved to #{filename}"
-  end
 end

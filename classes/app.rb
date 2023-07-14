@@ -9,8 +9,8 @@ class App
 
     # code for music
     @music_catalog = MusicCatalog.new
-    return unless File.empty?('./JSON/music_album.json') == false && File.empty?('./JSON/genre.json') == false
-
+    unless File.empty?('./json_database/music_albums.json') == false && File.empty?('./json_database/genres.json') == false
+    end
     @music_catalog.music_albums = Storage.load_data('music_album')
     @music_catalog.genres = Storage.load_data('genre')
 
@@ -41,6 +41,8 @@ class App
     # Add the music album and genre to the music catalog
     @music_catalog.music_albums.push(music_album)
     @music_catalog.genres.push(genre)
+    Storage.save_data('music_albums', @music_catalog.music_albums)
+    Storage.save_data('genres', @music_catalog.genres)
     puts 'Music album created successfully!'
     @main.show_options
   end
@@ -49,11 +51,11 @@ class App
     @music_catalog.list_all_music_albums
     @main.show_options
   end
-  
+
   def list_all_genres
     @music_catalog.list_all_genres
     @main.show_options
-  end  
+  end
 
   # code for game
   def create_a_game
