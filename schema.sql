@@ -25,7 +25,7 @@ CREATE TABLE label(
 );
 
 CREATE TABLE item_label (
-  label INT REFERENCES label(id)
+  label INT REFERENCES label(id),
   item INT REFERENCES item(id),
   PRIMARY KEY (label, item)
 );
