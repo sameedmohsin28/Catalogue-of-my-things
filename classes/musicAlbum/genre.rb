@@ -15,14 +15,12 @@ class Genre
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
-      'id' => @id,
-      'name' => @name,
-      'items' => @items
+      'name' => @name
     }.to_json(*args)
   end
 
   def self.json_create(object)
-    new(object['id'], object['name'], object['items'])
+    new(object['name'])
   end
 
   private

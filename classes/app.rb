@@ -1,6 +1,8 @@
 require_relative 'create_instances/create_instances_game'
 require_relative 'storage'
 require_relative 'create_instances/create_instance_music'
+require_relative 'musicAlbum/music_album'
+require_relative 'musicAlbum/genre'
 
 class App
   def initialize(main)
@@ -9,14 +11,17 @@ class App
 
     # code for music
     @music_catalog = MusicCatalog.new
-    unless File.empty?('./json_database/music_albums.json') == false && File.empty?('./json_database/genres.json') == false
-    end
-    @music_catalog.music_albums = Storage.load_data('music_album')
-    @music_catalog.genres = Storage.load_data('genre')
+    @music_baseurl = './json_database/music_albums.json'
+    return unless File.empty?(@music_baseurl) == false && File.empty?('./json_database/genres.json') == false
+
+    @music_catalog.music_albums = Storage.load_data('music_albums')
+    @music_catalog.genres = Storage.load_data('genres')
 
     # code for game
     @game_methods = GameMethods.new
-    return unless File.empty?('./JSON/games.json') == false && File.empty?('./JSON/authors.json') == false
+    unless File.empty?('./json_database/games.json') == false && File.empty?('./json_database/authors.json') == false
+      return
+    end
 
     @game_methods.games = Storage.load_data('games')
     @game_methods.authors = Storage.load_data('authors')
@@ -46,7 +51,7 @@ class App
     puts 'Music album created successfully!'
     @main.show_options
   end
-  
+
   def list_all_music_albums
     @music_catalog.list_all_music_albums
     @main.show_options
