@@ -40,6 +40,7 @@ CREATE TABLE genre (
 CREATE TABLE music_album (
   id INT PRIMARY KEY REFERENCES item(id),
   on_spotify BOOLEAN
+  title TEXT
 );
 
 CREATE TABLE item_genre (

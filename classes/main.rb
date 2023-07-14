@@ -24,8 +24,11 @@ class Startup
 
   def choice(selector)
     options = {
+      '2' => :list_all_music_albums,
       '3' => :list_of_games,
+      '4' => :list_all_genres,
       '6' => :list_of_authors,
+      '8' => :create_a_music_album,
       '9' => :create_a_game,
       '10' => :exit
     }
