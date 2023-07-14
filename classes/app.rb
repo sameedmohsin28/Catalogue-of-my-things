@@ -8,7 +8,10 @@ class App
 
     # code  for book
     @ui_task_book_instance = UITaskBook.new
-    return unless File.empty?('./json_database/books.json') == false && File.empty?('./json_database/labels.json') == false
+    unless File.empty?('./json_database/books.json') == false && File.empty?('./json_database/labels.json') == false
+      return
+    end
+
     @ui_task_book_instance.books = Storage.load_data('books')
     @ui_task_book_instance.labels = Storage.load_data('labels')
 
@@ -16,7 +19,9 @@ class App
 
     # code for game
     @game_methods = GameMethods.new
-    return unless File.empty?('./json_database/games.json') == false && File.empty?('./json_database/authors.json') == false
+    unless File.empty?('./json_database/games.json') == false && File.empty?('./json_database/authors.json') == false
+      return
+    end
 
     @game_methods.games = Storage.load_data('games')
     @game_methods.authors = Storage.load_data('authors')
@@ -42,8 +47,7 @@ class App
     @ui_task_book_instance.add_a_book(publish_date, publisher, cover_state, label, color)
     Storage.save_data('books', @ui_task_book_instance.books)
     Storage.save_data('labels', @ui_task_book_instance.labels)
-    puts 'The book has been added.'
-    puts ''
+    puts "The book has been added. \n"
     @main.show_options
   end
 

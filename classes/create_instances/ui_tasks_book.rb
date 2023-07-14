@@ -18,7 +18,7 @@ class UITaskBook
   def create_label(label, color, book_instance)
     label_instance = Label.new(label, color)
     label_instance.add_item(book_instance)
-    @labels.push(label_instance) 
+    @labels.push(label_instance)
   end
 
   def list_all_books
