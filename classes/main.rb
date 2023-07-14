@@ -18,14 +18,19 @@ class Startup
     puts '8 - Add a music album'
     puts '9 - Add a game'
     puts '10 - Exit'
+    print 'Enter your choice: '
     selector = gets.chomp
+    puts ''
     choice(selector)
   end
 
   def choice(selector)
     options = {
+      '1' => :directing_to_list_all_books,
       '3' => :list_of_games,
+      '5' => :directing_to_list_all_labels,
       '6' => :list_of_authors,
+      '7' => :input_for_add_a_book,
       '9' => :create_a_game,
       '10' => :exit
     }

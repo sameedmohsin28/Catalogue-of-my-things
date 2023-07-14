@@ -16,7 +16,7 @@ class BookMock
   end
 
   def can_be_archived?
-    calculated_years = ((Time.new - Time.parse(@publish_date)) / 31_615_673).floor
+    calculated_years = ((Time.parse('10-07-2023') - Time.parse(@publish_date)) / 31_615_673).floor
     @cover_state == 'bad' || calculated_years > 10
   end
 
