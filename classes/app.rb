@@ -34,7 +34,6 @@ class App
 
     @game_methods.games = Storage.load_data('games')
     @game_methods.authors = Storage.load_data('authors')
-    puts @game_methods.authors
   end
 
   # code for book
